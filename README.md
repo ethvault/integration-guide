@@ -50,3 +50,6 @@ If you created a ticket, close your ticket to let Ethvault know to update the ho
 
 Because most dApps are stateless interfaces for interacting with Ethereum contracts, i.e. do not use cookies or store user credentials, allowing iframe embedding does not incur the usual [clickjacking](https://en.wikipedia.org/wiki/Clickjacking) risk.
 
+### How should I announce the integration?
+
+Ethvault is in early alpha, but will launch offering Ether and a free ENS subdomain to each sign up in August 2019. Please [ping Ethvault](mailto:moody.salem@gmail.com) to coordinate an announcement.
