@@ -22,7 +22,7 @@ You have two options for accessing the Ethvault wallet from your dApp
 
 ## Step 3: Update your `Content-Security-Policy` and `X-Frame-Options` headers (10 - 30 minutes)
 
-In order to be embed your dApp in any iframe, your web servers need to send the correct HTTP headers. `X-Frame-Options` is superceded by `Content-Security-Policy`, but you should set both headers for compatibility with older browsers.
+In order to be embed your dApp in any iframe, your web servers need to send the correct HTTP headers. `X-Frame-Options` is superceded by `Content-Security-Policy`, but you should set both headers for compatibility with older browsers. If you do not currently set either of these security headers, you do not need to make any changes, but you should be aware that they can affect the compatibility with Ethvault.
 
 ### Update `Content-Security-Policy`
 
@@ -48,7 +48,18 @@ If you created a ticket, close your ticket to let Ethvault know to update the ho
 
 ### Is it safe to allow iframe embedding for my dApp?
 
-Because most dApps are stateless interfaces for interacting with Ethereum contracts, i.e. do not use cookies or store user credentials, allowing iframe embedding does not incur the usual [clickjacking](https://en.wikipedia.org/wiki/Clickjacking) risk.
+Because most dApps are stateless interfaces for interacting with Ethereum contracts, i.e. do not use cookies or store user credentials, allowing iframe embedding does not incur the usual [clickjacking](https://en.wikipedia.org/wiki/Clickjacking) risk. Many dApps do not set these headers and no iframe exploit has been revealed.
+
+### Is it safe to trust any iframe Ethereum provider?
+
+There is [at least one case](https://github.com/ethvault/iframe-provider-polyfill/issues/1) where a malicious site can use an iframe to embed your dApp and modify transactions and signatures sent to an external wallet, or data shown in your dApp. However, users must confirm the details of every transaction sent from your dApp in their wallet, regardless of whether your dApp is embedded or not. Thus the severity of this issue is low.
+
+### Is Ethvault audited for security?
+
+Ethvault has requested audit of two components of its OSS software stack:
+
+- [EthvaultENSRegistrar](https://github.com/EthereumCommonwealth/Auditing/issues/350)
+- [iframe wallets](https://github.com/EthereumCommonwealth/Auditing/issues/351)
 
 ### How should I announce the integration?
 
