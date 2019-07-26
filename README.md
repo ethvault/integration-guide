@@ -1,6 +1,6 @@
 # Ethvault Integration Guide
 
-## Step 0: What is Ethvault?
+## What is Ethvault?
 
 Ethvault is a browser based Ethereum wallet and dApp browser.
 
