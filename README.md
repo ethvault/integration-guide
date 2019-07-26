@@ -52,7 +52,7 @@ Because most dApps are stateless interfaces for interacting with Ethereum contra
 
 ### Is it safe to trust any iframe Ethereum provider?
 
-There is [at least one case](https://github.com/ethvault/iframe-provider-polyfill/issues/1) where a malicious site can use an iframe to embed your dApp and modify transactions and signatures sent to an external wallet, or data shown in your dApp. However, users must confirm the details of every transaction sent from your dApp in their wallet, regardless of whether your dApp is embedded or not. Thus the severity of this issue is low.
+There is [at least one case](https://github.com/ethvault/iframe-provider-polyfill/issues/1) where a malicious site can use an iframe to embed your dApp and modify transactions and signatures sent to an external wallet, or data shown in your dApp. However, users must confirm the details of every transaction sent from your dApp in their wallet, regardless of whether your dApp is embedded or not. In addition, this issue is easily mitigated by limiting the origins that may embed your dApp in an iframe via the security headers described above. Thus the severity of this issue is low.
 
 ### Is Ethvault audited for security?
 
