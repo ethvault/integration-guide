@@ -10,7 +10,7 @@ Integrating with Ethvault is simple and is estimated to take anywhere from 1 min
 
 ## Step 1 (Optional): Create an issue in this repository (1 minute)
 
-Create an issue in this repository to track the integration. This will be where you can easily request changes to Ethvault to support your integration. It will be referenced when updating https://ethvault.xyz to include your site.
+Create an issue in this repository to track the integration. This will be where you can easily request changes to Ethvault to support your integration. It will be referenced when updating https://myethvault.com to include your site.
 
 ## Step 2: Add the Web3 provider to your dApp (10 - 30 minutes)
 
@@ -26,23 +26,23 @@ In order to be embed your dApp in any iframe, your web servers need to send the 
 
 ### Update `Content-Security-Policy`
 
-You must send the directive `frame-ancestors` in this header with the value of `https://ethvault.xyz` (recommended) or the wildcard `'*'`. This allows the user agent to embed your dApp in an iframe as long as all the parent windows have the specified origin. A wildcard for this directive indicates your site may be embedded in any iframe.
+You must send the directive `frame-ancestors` in this header with the value of `https://myethvault.com` (recommended) or the wildcard `'*'`. This allows the user agent to embed your dApp in an iframe as long as all the parent windows have the specified origin. A wildcard for this directive indicates your site may be embedded in any iframe.
 
 See [MDN documentation](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors) for more information.
 
 ### (Optional) Update `X-Frame-Options`
 
-You must send the value `allow-from https://ethvault.xyz` or omit this header to allow it to be embedded in an iframe. Many browsers including Chrome do not support `allow-from` for this header and will notify you of the invalid headers in the console. Thus setting this header is optional.
+You must send the value `allow-from https://myethvault.com` or omit this header to allow it to be embedded in an iframe. Many browsers including Chrome do not support `allow-from` for this header and will notify you of the invalid headers in the console. Thus setting this header is optional.
 
 See [MDN documentation](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options) for more information.
 
 ## Step 4: Test the app (10 - 30 minutes)
 
-Visit `https://ethvault.xyz/browse#https://my-site-url.com` to try your site out. You should be able to sign in and interact with the website using your Ethvault wallet. Note that `https://ethvault.xyz` only allows embedding sites with the https protocol. Check the console to see logs of the communication between the dApp and Ethvault. Everything should just work so this step is optional.
+Visit `https://myethvault.com/browse#https://my-site-url.com` to try your site out. You should be able to sign in and interact with the website using your Ethvault wallet. Note that `https://myethvault.com` only allows embedding sites with the https protocol. Check the console to see logs of the communication between the dApp and Ethvault. Everything should just work so this step is optional.
 
 ## Step 5: Close the ticket (1 minute)
 
-If you created a ticket, close your ticket to let Ethvault know to update the homepage with your integration. Otherwise [ping Ethvault](mailto:moody@ethvault.xyz).
+If you created a ticket, close your ticket to let Ethvault know to update the homepage with your integration. Otherwise [ping Ethvault](mailto:moody@myethvault.com).
 
 ## FAQ
 
@@ -54,9 +54,9 @@ Because most dApps are stateless interfaces for interacting with Ethereum contra
 
 There is [at least one case](https://github.com/ethvault/iframe-provider-polyfill/issues/1) where a malicious site can use an iframe to embed your dApp and modify transactions and signatures sent to an external wallet, or data shown in your dApp. However, users must confirm the details of every transaction sent from your dApp in their wallet, regardless of whether your dApp is embedded or not. In addition, this issue is easily mitigated by limiting the origins that may embed your dApp in an iframe via the security headers described above. Thus the severity of this issue is low.
 
-### Is Ethvault audited for security?
+### Is Ethvault audited?
 
-Ethvault has requested audit of two components of its OSS software stack:
+Ethvault is current
 
 - [EthvaultENSRegistrar](https://github.com/EthereumCommonwealth/Auditing/issues/350)
 - [iframe wallets](https://github.com/EthereumCommonwealth/Auditing/issues/351)
