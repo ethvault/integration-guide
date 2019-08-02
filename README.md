@@ -56,10 +56,9 @@ There is [at least one case](https://github.com/ethvault/iframe-provider-polyfil
 
 ### Is Ethvault audited?
 
-Ethvault is current
+Ethvault is not yet audited, but some components are in the process of being audited.
 
 - [EthvaultENSRegistrar](https://github.com/EthereumCommonwealth/Auditing/issues/350)
-- [iframe wallets](https://github.com/EthereumCommonwealth/Auditing/issues/351)
 
 ### How should I announce the integration?
 
